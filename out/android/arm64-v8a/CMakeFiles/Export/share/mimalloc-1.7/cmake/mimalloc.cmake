@@ -4,7 +4,7 @@ if("${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}" LESS 2.5)
    message(FATAL_ERROR "CMake >= 2.6.0 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.6...3.19)
+cmake_policy(VERSION 2.6...3.18)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -55,6 +55,7 @@ add_library(mimalloc SHARED IMPORTED)
 
 set_target_properties(mimalloc PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/mimalloc-1.7"
+  INTERFACE_LINK_LIBRARIES "pthread"
 )
 
 # Create imported target mimalloc-static
@@ -62,7 +63,12 @@ add_library(mimalloc-static STATIC IMPORTED)
 
 set_target_properties(mimalloc-static PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include/mimalloc-1.7"
+  INTERFACE_LINK_LIBRARIES "pthread"
 )
+
+if(CMAKE_VERSION VERSION_LESS 2.8.12)
+  message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")
+endif()
 
 # Load information for each installed configuration.
 get_filename_component(_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)

@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2
+# Install script for directory: /Users/nathanbyu/Downloads/mimalloc-1.7.2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/libmimalloc")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,15 +39,15 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/sgfirstliu/Downloads/android-ndk-r20/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android-objdump.exe")
+  set(CMAKE_OBJDUMP "/Users/nathanbyu/Library/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android-objdump")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/mimalloc-1.7" TYPE SHARED_LIBRARY FILES "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/libmimalloc.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/mimalloc-1.7" TYPE SHARED_LIBRARY FILES "/Users/nathanbyu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/libmimalloc.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mimalloc-1.7/libmimalloc.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mimalloc-1.7/libmimalloc.so")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "C:/Users/sgfirstliu/Downloads/android-ndk-r20/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mimalloc-1.7/libmimalloc.so")
+      execute_process(COMMAND "/Users/nathanbyu/Library/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/darwin-x86_64/bin/aarch64-linux-android-strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/mimalloc-1.7/libmimalloc.so")
     endif()
   endif()
 endif()
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/mimalloc-1.7/cmake/mimalloc.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/mimalloc-1.7/cmake/mimalloc.cmake"
-         "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/CMakeFiles/Export/share/mimalloc-1.7/cmake/mimalloc.cmake")
+         "/Users/nathanbyu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/CMakeFiles/Export/share/mimalloc-1.7/cmake/mimalloc.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/mimalloc-1.7/cmake/mimalloc-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -68,38 +68,38 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mimalloc-1.7/cmake" TYPE FILE FILES "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/CMakeFiles/Export/share/mimalloc-1.7/cmake/mimalloc.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mimalloc-1.7/cmake" TYPE FILE FILES "/Users/nathanbyu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/CMakeFiles/Export/share/mimalloc-1.7/cmake/mimalloc.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mimalloc-1.7/cmake" TYPE FILE FILES "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/CMakeFiles/Export/share/mimalloc-1.7/cmake/mimalloc-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mimalloc-1.7/cmake" TYPE FILE FILES "/Users/nathanbyu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/CMakeFiles/Export/share/mimalloc-1.7/cmake/mimalloc-release.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/mimalloc-1.7" TYPE STATIC_LIBRARY FILES "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/libmimalloc.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/mimalloc-1.7" TYPE STATIC_LIBRARY FILES "/Users/nathanbyu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/libmimalloc.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/mimalloc-1.7" TYPE FILE FILES "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/include/mimalloc.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/mimalloc-1.7" TYPE FILE FILES "/Users/nathanbyu/Downloads/mimalloc-1.7.2/include/mimalloc.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/mimalloc-1.7" TYPE FILE FILES "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/include/mimalloc-override.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/mimalloc-1.7" TYPE FILE FILES "/Users/nathanbyu/Downloads/mimalloc-1.7.2/include/mimalloc-override.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/mimalloc-1.7" TYPE FILE FILES "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/include/mimalloc-new-delete.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/mimalloc-1.7" TYPE FILE FILES "/Users/nathanbyu/Downloads/mimalloc-1.7.2/include/mimalloc-new-delete.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mimalloc-1.7/cmake" TYPE FILE FILES "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/cmake/mimalloc-config.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mimalloc-1.7/cmake" TYPE FILE FILES "/Users/nathanbyu/Downloads/mimalloc-1.7.2/cmake/mimalloc-config.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mimalloc-1.7/cmake" TYPE FILE FILES "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/cmake/mimalloc-config-version.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mimalloc-1.7/cmake" TYPE FILE FILES "/Users/nathanbyu/Downloads/mimalloc-1.7.2/cmake/mimalloc-config-version.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND C:/Program Files/CMake/bin/cmake.exe -E create_symlink mimalloc-1.7/libmimalloc.so.1.7 libmimalloc.so WORKING_DIRECTORY ${CMAKE_INSTALL_PREFIX}/lib)
+  execute_process(COMMAND /usr/local/Cellar/cmake/3.20.5/bin/cmake -E create_symlink mimalloc-1.7/libmimalloc.so.1.7 libmimalloc.so WORKING_DIRECTORY ${CMAKE_INSTALL_PREFIX}/lib)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -107,7 +107,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND C:/Program Files/CMake/bin/cmake.exe -E create_symlink mimalloc-1.7/libmimalloc.so.1.7 libmimalloc.so.1.7 WORKING_DIRECTORY ${CMAKE_INSTALL_PREFIX}/lib)
+  execute_process(COMMAND /usr/local/Cellar/cmake/3.20.5/bin/cmake -E create_symlink mimalloc-1.7/libmimalloc.so.1.7 libmimalloc.so.1.7 WORKING_DIRECTORY ${CMAKE_INSTALL_PREFIX}/lib)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -115,7 +115,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/mimalloc-1.7" TYPE FILE RENAME "mimalloc.o" FILES "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/CMakeFiles/mimalloc-obj.dir/src/static.c.o")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/mimalloc-1.7" TYPE FILE RENAME "mimalloc.o" FILES "/Users/nathanbyu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/CMakeFiles/mimalloc-obj.dir/src/static.c.o")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -126,5 +126,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/sgfirstliu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/nathanbyu/Downloads/mimalloc-1.7.2/out/android/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
