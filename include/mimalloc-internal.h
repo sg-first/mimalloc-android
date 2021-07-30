@@ -293,7 +293,7 @@ extern bool _mi_process_is_initialized;
 mi_heap_t*  _mi_heap_main_get(void);    // statically allocated main backing heap
 
 #if defined(MI_MALLOC_OVERRIDE)
-#if defined(__APPLE__) // macOS
+#if defined(__APPLE__) || defined(__ANDROID__)
 #define MI_TLS_SLOT               89  // seems unused? 
 // other possible unused ones are 9, 29, __PTK_FRAMEWORK_JAVASCRIPTCORE_KEY4 (94), __PTK_FRAMEWORK_GC_KEY9 (112) and __PTK_FRAMEWORK_OLDGC_KEY9 (89)
 // see <https://github.com/rweichler/substrate/blob/master/include/pthread_machdep.h>
