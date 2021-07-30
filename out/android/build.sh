@@ -1,6 +1,6 @@
 toolchain=/Users/nathanbyu/Library/Android/sdk/ndk/20.0.5594570/build/cmake/android.toolchain.cmake
 android_ndk=/Users/nathanbyu/Library/Android/sdk/ndk/20.0.5594570/
-build_type=Debug
+build_type=Release
 #gernerator="\"Unix Makefiles\""
 gernerator="Ninja"
 build_path=arm64-v8a

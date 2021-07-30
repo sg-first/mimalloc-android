@@ -42,8 +42,6 @@ set(mi_sources
     src/options.c
     src/init.c)
 
-add_compile_options(-g -O0)
-
 # -----------------------------------------------------------------------------
 # Converience: set default build type depending on the build directory
 # -----------------------------------------------------------------------------
