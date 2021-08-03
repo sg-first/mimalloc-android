@@ -159,16 +159,9 @@ void mi_option_disable(mi_option_t option) {
   mi_option_set_enabled(option,false);
 }
 
-
 static void mi_out_stderr(const char* msg, void* arg) {
   UNUSED(arg);
-  #ifdef _WIN32
-  // on windows with redirection, the C runtime cannot handle locale dependent output
-  // after the main thread closes so we use direct console output.
-  if (!_mi_preloading()) { _cputs(msg); }
-  #else
-  fputs(msg, stderr);
-  #endif
+  fputs(msg, stdout);
 }
 
 // Since an output function can be registered earliest in the `main`
